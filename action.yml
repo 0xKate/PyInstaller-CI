@@ -1,0 +1,17 @@
+# action.yaml
+name: 'PyInstaller-CI'
+description: 'Used to package my python programs as windows executables'
+branding:
+  icon: 'circle'
+  color: 'purple'
+inputs:
+  repo_name:
+    description: "Name of the git repo (automatic)"
+    required: true
+outputs:
+  output:
+    description: 'The output of PyInstaller'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
